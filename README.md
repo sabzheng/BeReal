@@ -29,11 +29,15 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='v1.gif' title='Video Walkthrough' width='250px' alt='Video Walkthrough' />
-<img src='v2.gif' title='Video Walkthrough' width='250px' alt='Video Walkthrough' />
+<img src='v1.gif' title='Video Walkthrough' width='300px' alt='Video Walkthrough' /><br>
+
+<img src='v2.gif' title='Video Walkthrough' width='300px' alt='Video Walkthrough' />
+
+Full video in the dropbox link:
+https://www.dropbox.com/s/g2u8bduxgk5ejpq/video-walkthru.mov?dl=0
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with ezgif. 
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
