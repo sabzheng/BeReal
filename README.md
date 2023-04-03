@@ -1,29 +1,25 @@
-# Project 5 - *Be Real*
-Recreate basic functionality of the trending app BeReal
+# Project 6 - *Be REal*
 
 Submitted by: **Sabrina Zheng**
 
-**Be Real** is an app that allows user login, user posting, and new user sign up through parse and back4app as server. 
+**Be Real** is an app that introduces posting photo feature, photo taking feature, login feature,and signup feature.
 
-Time spent: **5** hours spent in total
+Time spent: **3** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [X] User can register a new account
-- [X] User can log in with newly created account
-- [X] App has a feed of posts when user logs in
-- [X] User can upload a new post which takes in a picture from photo library and a caption    
+- [X] User can launch camera to take photo instead of photo library
+        I did implement it and it works but just that I could show it with the simulator so I didn't open it. 
+- [X] User session persists when application is closed and relaunched
+- [X] Users are able to log out and return to sign in page
+- [X] Users are NOT able to see other photos until they upload their own    
  
 The following **optional** features are implemented:
 
-- [ ] Users can pull to refresh their feed and see a loading indicator
-- [ ] Users can infinite-scroll in their feed to see past the 10 most recent photos
-- [ ] Users can see location and time of photo upload in the feed    
-- [ ] User is able to logout
-- [ ] User stays logged in when app is closed and open again    
-
+- [ ] User receive notifcation when it is time to post
+- [ ] Users can make comments and view comments in posts    
 
 The following **additional** features are implemented:
 
@@ -33,10 +29,10 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='appUse.gif' title='Video Walkthrough' width='300' alt='Video Walkthrough' />
+<img src='video-walkthru' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with https://www.img2go.com/result#j=6aeab9cb-cbd5-4d45-9e2c-eda881687b70
+GIF created with ...  
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -44,7 +40,7 @@ GIF created with https://www.img2go.com/result#j=6aeab9cb-cbd5-4d45-9e2c-eda8816
 
 ## Notes
 
-Challenged by how to use parse and some bugs with connecting the method to the element. 
+Describe any challenges encountered while building the app.
 
 ## License
 

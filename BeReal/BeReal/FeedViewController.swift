@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import ParseSwift
 
 class FeedViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    private let refreshControl = UIRefreshControl()
     
     private var posts = [Post]() {
         didSet {
@@ -23,6 +25,8 @@ class FeedViewController: UIViewController {
         tableView.dataSource = self
         tableView.allowsSelection = false
         overrideUserInterfaceStyle = .dark
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(onPullToRefresh), for: .valueChanged)
         // Do any additional setup after loading the view.
     }
     
@@ -32,16 +36,21 @@ class FeedViewController: UIViewController {
         queryPosts()
     }
     
-    private func queryPosts() {
+    private func queryPosts(completion: (() -> Void)? = nil) {
         // TODO: Pt 1 - Query Posts
 // https://github.com/parse-community/Parse-Swift/blob/3d4bb13acd7496a49b259e541928ad493219d363/ParseSwift.playground/Pages/2%20-%20Finding%20Objects.xcplaygroundpage/Contents.swift#L66
         
         // 1. Create a query to fetch Posts
         // 2. Any properties that are Parse objects are stored by reference in Parse DB and as such need to explicitly use `include_:)` to be included in query results.
         // 3. Sort the posts by descending order based on the created at date
+        let yesterdayDate = Calendar.current.date(byAdding: .day, value: (-1), to: Date())!
+                           
         let query = Post.query()
             .include("user")
             .order([.descending("createdAt")])
+            .where("createdAt" >= yesterdayDate) // <- Only include results created yesterday onwards
+            .limit(10) // <- Limit max number of returned posts to 10
+
 
         // Fetch objects (posts) defined in query (async)
         query.find { [weak self] result in
@@ -60,6 +69,13 @@ class FeedViewController: UIViewController {
     @IBAction func onLogOutTapped(_ sender: Any) {
         showConfirmLogoutAlert()
     }
+    @objc private func onPullToRefresh() {
+        refreshControl.beginRefreshing()
+        queryPosts { [weak self] in
+            self?.refreshControl.endRefreshing()
+        }
+    }
+
 
     private func showConfirmLogoutAlert() {
         let alertController = UIAlertController(title: "Log out of your account?", message: nil, preferredStyle: .alert)
