@@ -29,7 +29,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='video-walkthru' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+https://www.dropbox.com/s/g2u8bduxgk5ejpq/video-walkthru.mov?dl=0
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
