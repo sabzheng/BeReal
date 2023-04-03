@@ -29,9 +29,9 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='v1.gif' title='Video Walkthrough' width='300px' alt='Video Walkthrough' /><br>
+<img src='v1.gif' title='Video Walkthrough' width='300' alt='Video Walkthrough' /><br>
 
-<img src='v2.gif' title='Video Walkthrough' width='300px' alt='Video Walkthrough' />
+<img src='v2.gif' title='Video Walkthrough' width='300' alt='Video Walkthrough' />
 
 Full video in the dropbox link:
 https://www.dropbox.com/s/g2u8bduxgk5ejpq/video-walkthru.mov?dl=0
